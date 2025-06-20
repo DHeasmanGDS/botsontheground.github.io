@@ -3,24 +3,40 @@ layout: default
 title: Home
 ---
 
-<header>
-  <h1>Bots on the Ground</h1>
-  <p>Exploring the intersection of automation, data, and geoscience</p>
-</header>
+<div class="homepage-header">
+  <div class="mascot-container">
+    <img src="/assets/images/mascot.png" alt="Bots Mascot" class="mascot-img">
+  </div>
+  <h1 class="homepage-title">Bots on the Ground</h1>
+  <p class="homepage-subtitle">Exploring the intersection of automation, data, and geoscience.</p>
+</div>
 
-<nav>
-  <a href="/">Home</a>
-  <a href="/about.html">About</a>
-  <a href="https://terra-datasystems.com" target="_blank">Drew Heasman</a>
-</nav>
-
-<main>
-  {% for post in site.posts %}
-    <article>
+<div class="posts-list">
+  {% for post in paginator.posts %}
+    <article class="post-card">
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <div class="meta">Posted on {{ post.date | date: "%B %d, %Y" }}</div>
+
+      <div class="meta">
+        Posted on {{ post.date | date: "%B %d, %Y" }} |
+        Categories:
+        {% for category in post.categories %}
+          <a href="/categories/{{ category | downcase | url_encode }}.html">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </div>
+
       <p>{{ post.excerpt }}</p>
       <a class="read-more" href="{{ post.url }}">Read more →</a>
     </article>
   {% endfor %}
-</main>
+</div>
+
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a class="pagination-link" href="{{ paginator.previous_page_path }}">&larr; Newer Posts</a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a class="pagination-link" href="{{ paginator.next_page_path }}">Older Posts &rarr;</a>
+  {% endif %}
+</div>

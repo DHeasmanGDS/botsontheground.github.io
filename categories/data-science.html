@@ -1,0 +1,14 @@
+---
+layout: default
+title: Data Science
+---
+
+<h2>Posts in "Data Science"</h2>
+<ul>
+  {% for post in site.categories.data-science %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <small> – {{ post.date | date: "%B %d, %Y" }}</small>
+    </li>
+  {% endfor %}
+</ul>
