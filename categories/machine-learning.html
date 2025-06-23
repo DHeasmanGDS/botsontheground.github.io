@@ -1,0 +1,14 @@
+---
+layout: default
+title: Machine Learning
+---
+
+<h2>Posts in "Machine Learning"</h2>
+<ul>
+  {% for post in site.categories.machine-learning %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <small> – {{ post.date | date: "%B %d, %Y" }}</small>
+    </li>
+  {% endfor %}
+</ul>
