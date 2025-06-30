@@ -64,6 +64,13 @@
       padding: 0 1.5rem;
     }
 
+    .post-title {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
     .post-content {
       line-height: 1.6;
     }
@@ -73,152 +80,147 @@
       color: #666;
       font-style: italic;
       margin-top: 0.5rem;
-      text-align: left;
+      text-align: center;
     }
 
     /* Flexible image + text block */
-	.flex-image-block {
-	  display: flex;
-	  gap: 2rem;
-	  margin: 3rem 0;
-	  align-items: flex-start;
-	  flex-wrap: nowrap; /* prevent early wrapping */
-	}
+    .flex-image-block {
+      display: flex;
+      gap: 2rem;
+      margin: 3rem 0;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+    }
 
-	.flex-image-block.reverse {
-	  flex-direction: row-reverse;
-	}
+    .flex-image-block.reverse {
+      flex-direction: row-reverse;
+    }
 
-	.flex-text {
-	  flex: 1;
-	  min-width: 0;
-	}
+    .flex-text {
+      flex: 1;
+      min-width: 0;
+    }
 
-	.image-with-caption {
-	  flex: 1;
-	  min-width: 0;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	}
+    .image-with-caption {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-	.image-with-caption img {
-	  width: 100%;
-	  height: auto;
-	  max-height: 100%; /* scales better with varying text */
-	  object-fit: contain;
-	  border-radius: 6px;
-	}
+    .image-with-caption img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 6px;
+    }
 
-	.blog-caption {
-	  font-size: 0.9rem;
-	  color: #666;
-	  font-style: italic;
-	  margin-top: 0.5rem;
-	  text-align: center;
-	}
-	.blog-signoff {
-	  background-color: #eef6f8;
-	  border-left: 4px solid var(--primary-color);
-	  padding: 1.5rem 1.5rem;
-	  margin: 3rem auto;
-	  max-width: 1000px;
-	  border-radius: 8px;
-	  font-size: 1rem;
-	}
+    .blog-signoff {
+      background-color: #eef6f8;
+      border-left: 4px solid var(--primary-color);
+      padding: 1.5rem;
+      margin: 3rem auto;
+      max-width: 1000px;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
 
-	.blog-signoff blockquote {
-	  margin-top: 1rem;
-	  padding-left: 1rem;
-	  font-style: italic;
-	  color: #333;
-	  border-left: 3px solid var(--accent-color);
-	}
+    .blog-signoff blockquote {
+      margin-top: 1rem;
+      padding-left: 1rem;
+      font-style: italic;
+      color: #333;
+      border-left: 3px solid var(--accent-color);
+    }
 
-	.horizontal-divider {
-	  border-top: 2px dashed var(--primary-color);
-	  opacity: 0.4;
-	  margin: 2.5rem auto;
-	  width: 95%;
-	}
+    .horizontal-divider {
+      border-top: 2px dashed var(--primary-color);
+      opacity: 0.4;
+      margin: 2.5rem auto;
+      width: 95%;
+    }
 
-	.impact-card {
-	  background-color: #fff9e6;
-	  border: 3px solid #b2d7e5;
-	  padding: 1.5rem;
-	  margin: 3rem 0;
-	  border-radius: 8px;
-	  font-size: 1.05rem;
-	  font-weight: 750;
-	  color: #004466;
-	}
+    .impact-card {
+      background-color: #fff9e6;
+      border: 3px solid #b2d7e5;
+      padding: 1.5rem;
+      margin: 3rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 750;
+      color: #004466;
+    }
 
-	.return-button {
-	  display: inline-block;
-	  background-color: var(--primary-color);
-	  color: white;
-	  padding: 0.6rem 1.2rem;
-	  border-radius: 6px;
-	  text-decoration: none;
-	  font-weight: bold;
-	  transition: background-color 0.3s ease;
-	  margin-top: 2rem;
-	}
+    .return-button {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      margin-top: 2rem;
+    }
 
-	.return-button:hover {
-	  background-color: var(--accent-color);
-	  color: #333;
-	}
+    .return-button:hover {
+      background-color: var(--accent-color);
+      color: #333;
+    }
 
-	@media (max-width: 768px) {
-	  .flex-image-block {
-		flex-direction: column;
-	  }
-	}
-
-	
+    @media (max-width: 768px) {
+      .flex-image-block {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-	<main>
-	  <div class="post-content">
-		<article class="post">
-
-  <header class="post-header">
+<main>
+  <article class="post-content">
     <h1 class="post-title">About</h1>
-  </header>
 
-  <div class="post-content">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+    <p><strong>Bots on the Ground</strong> is a blog dedicated to exploring the intersection of automation, AI, and geoscience.</p>
 
-<p>You can find the source code for Minima at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/minima">minima</a></p>
+    <p>It covers topics like:</p>
+    <ul>
+      <li>Machine learning applied to mineral exploration</li>
+      <li>Python tools for geologists and data scientists</li>
+      <li>Real-world field workflows enhanced by automation</li>
+      <li>Personal reflections on working with rocks and code</li>
+    </ul>
 
-<p>You can find the source code for Jekyll at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+    <div class="horizontal-divider"></div>
 
+    <div class="flex-image-block">
+      <div style="text-align: center; margin: 2rem 0;">
+        <img src="/assets/images/mascot.png" alt="Bots Mascot" style="max-height: 200px;">
+      </div>
+      <div class="flex-text">
+        <h2>About Me</h2>
+        <p>I'm Drew, a geoscientist with 20+ years of geoscience experience and a background in computer science. I work at the boundary between geology and data science — and I'm always looking for ways to bring data, code, and exploration together.</p>
 
-  </div>
+        <p>Currently, I’m Director of Geodata at <a href="https://athaenergy.com" target="_blank">Atha Energy</a>, and wrapping up my MSc thesis focused on natural language processing and geoscientific knowledge extraction.</p>
+      </div>
+    </div>
 
-</article>
+    <div class="horizontal-divider"></div>
 
-	  </div>
+    <div class="impact-card">
+      Want to collaborate, contribute, or talk about bots in the bush? I’m all ears. Reach out via email or drop a comment on any post.
+    </div>
 
-	  
+    <a class="return-button" href="/">← Back to Home</a>
+  </article>
+</main>
 
-	  
-	</main>
+<footer>
+  &copy; 2025 Bots on the Ground. All rights reserved.
+</footer>
 
-
-
-  <footer>
-    &copy; 2025 Bots on the Ground. All rights reserved.
-  </footer>
 </body>
 </html>
-
-
