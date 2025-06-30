@@ -1,0 +1,176 @@
+/* Homepage Wrapper */
+.homepage-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header Bar Layout */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0f4f8;
+  border-bottom: 1px solid #ccc;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Left: Mascot Logo */
+.header-left .mascot-logo {
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Site Title */
+.site-title {
+  margin: 0;
+  font-size: 4.5rem;         
+  font-weight: 700;
+  color: #0066cc;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+  letter-spacing: 0.5px;  
+}
+
+.site-tagline {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;             
+}
+
+/* Center: Title and Tagline */
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.site-tagline {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Right: Navigation Links */
+.header-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-right a {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: 500;
+}
+
+.header-right a:hover {
+  text-decoration: underline;
+}
+
+}
+
+/* Horizontal Divider */
+.horizontal-divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 2rem 0;
+}
+
+/* Featured Post Section */
+.featured-post-section {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  border-left: 5px solid #0066cc;
+  border-radius: 8px;
+}
+
+.featured-post-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.featured-text {
+  flex: 2;
+}
+
+/* Masonry Grid */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Post Cards */
+.post-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+
+.post-card h3 {
+  margin-top: 0;
+}
+
+.post-card .meta {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Optional: Constrain images in cards */
+.post-card img {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Read More Link */
+.read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0066cc;
+}
+
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.pagination-link {
+  padding: 0.5rem 1rem;
+  background: #eee;
+  border-radius: 5px;
+  margin: 0 0.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.pagination-link:hover {
+  background: #ddd;
+}
